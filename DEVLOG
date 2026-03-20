@@ -1,0 +1,6 @@
+### Day 1
+- Read through the full assignment description carefully
+- Broke the project into smaller parts (stack, tokenizer, validation, conversion, evaluation)
+- Created GitHub repository and initial files (main.cpp, ArrayStack.h, DEVLOG.md)
+- Defined Token struct and function prototypes
+- Did not implement logic yet, focused on planning structure
