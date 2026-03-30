@@ -4,3 +4,10 @@
 - Created GitHub repository and initial files (main.cpp, ArrayStack.h, DEVLOG.md)
 - Defined Token struct and function prototypes
 - Did not implement logic yet, focused on planning structure
+
+### Forgot to move my work from CLion over to the Github sorry about the commit but here was my second day of work
+- Implemented ArrayStack class using std::vector
+- Completed push, pop, top, empty, and size methods
+- Added error handling for pop and top on empty stack
+- Tested stack manually with simple values to confirm behavior
+- Verified LIFO behavior works correctly
