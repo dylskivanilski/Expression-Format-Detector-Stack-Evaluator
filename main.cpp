@@ -11,6 +11,28 @@ struct Token {
 
 vector<Token> tokenize(const string& line) {
     vector<Token> tokens;
+    string current = "";
+
+    for (char c : line) {
+        if (isdigit(c)) {
+            current += c;
+        }
+        else {
+            if (!current.empty()) {
+                tokens.push_back({current});
+                current = "";
+            }
+
+            if (!isspace(c)) {
+                tokens.push_back({string(1, c)});
+            }
+        }
+    }
+
+    if (!current.empty()) {
+        tokens.push_back({current});
+    }
+
     return tokens;
 }
 
