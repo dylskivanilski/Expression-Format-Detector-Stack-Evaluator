@@ -46,3 +46,9 @@
 - Handled parentheses correctly
 - Verified output matches expected postfix expressions
 - Time to just start connecting everything with main and all that, I just have to paste and go over what I did from CLion
+
+### Integration
+- Ingrated everything to the main function
+- Tested program with various inputs
+- Hopefully output formatting matches the requirements
+- Finished
