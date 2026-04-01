@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cctype>
 #include "ArrayStack.h"
 
 using namespace std;
@@ -22,18 +23,24 @@ vector<Token> tokenize(const string& line) {
                 tokens.push_back({current});
                 current = "";
             }
-
             if (!isspace(c)) {
                 tokens.push_back({string(1, c)});
             }
         }
     }
 
-    if (!current.empty()) {
-        tokens.push_back({current});
+    if (!current.empty()) tokens.push_back({current});
+    return tokens;
     }
 
-    return tokens;
+bool isOperator(const string& s) {
+    return s == "+" || s == "-" || s == "*" || s == "/";
+}
+
+int precedence(const string& op) {
+    if (op == "+" || op == "-") return 1;
+    if (op == "*" || op == "/") return 2;
+    return 0;
 }
 
 bool isValidPostfix(const vector<Token>& tokens) {
