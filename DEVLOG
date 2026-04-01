@@ -20,5 +20,13 @@
 - Added temporary debug output to verify token sequence
 - Fixed issue where numbers were being split incorrectly
 
-###
-Finished and moved out array stack
+### Postfix validation & evaluation
+- Finished and moved out array stack
+- Implemented postfix validation using stack depth logic
+- Ensured operators require two operands
+- Tested valid and invalid postfix expressions
+- Verified final depth must equal 1
+- Implemented postfix evaluation using ArrayStack
+- Parsed numbers using stod
+- Applied correct operator logic for +, -, *, /
+- Tested evaluation with multiple postfix expressions
