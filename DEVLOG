@@ -30,3 +30,8 @@
 - Parsed numbers using stod
 - Applied correct operator logic for +, -, *, /
 - Tested evaluation with multiple postfix expressions
+
+### Forgot to add earlier
+- Implemented operator precedence function
+- Assigned correct precedence levels for arithmetic operators
+- Prepared for infix to postfix conversion
