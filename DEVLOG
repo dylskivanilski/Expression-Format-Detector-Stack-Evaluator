@@ -11,3 +11,11 @@
 - Added error handling for pop and top on empty stack
 - Tested stack manually with simple values to confirm behavior
 - Verified LIFO behavior works correctly
+
+### Forgot to add my stuff to DEVLOG last night but I'm just gonna add the rest of my work in increments today, I finished but I forgot to keep an update of DEVLOG and need to move my readme from my laptop over.
+- Implemented tokenizer to convert input string into tokens
+- Handled multi-digit numbers correctly by building number strings
+- Ignored whitespace and separated operators and parentheses
+- Tested tokenizer with multiple expressions (infix and postfix)
+- Added temporary debug output to verify token sequence
+- Fixed issue where numbers were being split incorrectly
