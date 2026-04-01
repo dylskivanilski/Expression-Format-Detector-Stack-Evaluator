@@ -63,11 +63,68 @@ bool isValidPostfix(const vector<Token>& tokens) {
 }
 
 bool isValidInfix(const vector<Token>& tokens) {
-    return false;
+    ArrayStack<string> stack;
+    bool expectOperand = true;
+
+    for (const auto& t : tokens) {
+        if (isdigit(t.value[0])) {
+            if (!expectOperand) return false;
+            expectOperand = false;
+        }
+        else if (t.value == "(") {
+            stack.push("(");
+            expectOperand = true;
+        }
+        else if (t.value == ")") {
+            if (stack.empty()) return false;
+            stack.pop();
+            expectOperand = false;
+        }
+        else if (isOperator(t.value)) {
+            if (expectOperand) return false;
+            expectOperand = true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    return !expectOperand && stack.empty();
 }
 
 vector<Token> infixToPostfix(const vector<Token>& tokens) {
     vector<Token> output;
+    ArrayStack<string> ops;
+
+    for (const auto& t : tokens) {
+        if (isdigit(t.value[0])) {
+            output.push_back(t);
+        }
+        else if (t.value == "(") {
+            ops.push(t.value);
+        }
+        else if (t.value == ")") {
+            while (!ops.empty() && ops.top() != "(") {
+                output.push_back({ops.top()});
+                ops.pop();
+            }
+            ops.pop();
+        }
+        else if (isOperator(t.value)) {
+            while (!ops.empty() &&
+                   precedence(ops.top()) >= precedence(t.value)) {
+                output.push_back({ops.top()});
+                ops.pop();
+            }
+            ops.push(t.value);
+        }
+    }
+
+    while (!ops.empty()) {
+        output.push_back({ops.top()});
+        ops.pop();
+    }
+
     return output;
 }
 
