@@ -35,3 +35,14 @@
 - Implemented operator precedence function
 - Assigned correct precedence levels for arithmetic operators
 - Prepared for infix to postfix conversion
+
+### Infix & Postfix
+- Implemented infix validation
+- Checked correct ordering of operands and operators
+- Used stack to validate parentheses balance
+- Tested various valid and invalid infix expressions
+- Implemented infix to postfix conversion using stack
+- Applied operator precedence rules
+- Handled parentheses correctly
+- Verified output matches expected postfix expressions
+- Time to just start connecting everything with main and all that, I just have to paste and go over what I did from CLion
