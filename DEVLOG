@@ -19,3 +19,6 @@
 - Tested tokenizer with multiple expressions (infix and postfix)
 - Added temporary debug output to verify token sequence
 - Fixed issue where numbers were being split incorrectly
+
+###
+Finished and moved out array stack
